@@ -2,6 +2,7 @@
 This project is an end-to-end Excel-based data analysis of sales and logistics operations for K.M Logistics Pvt. Ltd. using raw transactional data from 2022. The objective of the project is to clean raw data, structure it for analysis, and generate actionable business insights through reports and visualizations. 
 
 *RAW DATA*
+
 1. Data Dictionary
 The raw dataset consists of the following key attributes:
 
@@ -16,11 +17,34 @@ Product Metadata: Granular details including Category (Saree, Kurta, Set), Size,
 Geographic Data: Destination mapping via City, State, and Pincode for regional performance analysis.
 
 Financials: Order valuation in INR and currency standardizations.
-
-
-Boolean Logic: Standardized stock status and return flags for accurate KPI calculation.
 <img width="1918" height="1008" alt="image" src="https://github.com/user-attachments/assets/fd4ea198-b2cf-48b6-8863-6f46b5864e78" />
+
+
 *DATA CORRECTION & CLEANING*
+## 🛠️ Data Transformation & "Dirty Data" Resolution
+
+A significant portion of this project was dedicated to transforming the `RAW SHEET` (31,000+ records) into a verified, analysis-ready dataset. Real-world logistics data is rarely clean; I implemented the following data engineering steps to ensure 100% reporting accuracy.
+
+### 1. Handling Structural Corruption
+* **Date Restoration:** Resolved widespread "########" overflow errors in the raw date column. I standardized these into a unified `DD-MM-YYYY` format and extracted a **Month** column to enable seasonality and trend analysis.
+* **Size Standardisation:** Cleaned the 'Size' column to remove inconsistencies, ensuring that variants like 'Free', 'M', and '3XL' were correctly categorized for inventory reporting.
+
+### 2. Categorical & Logical Cleaning
+* **Gender Normalisation:** The raw data contained inconsistent labels (e.g., "M" vs "Men"). I used conditional logic to unify these into two clean categories: **Men** and **Women**.
+* **Status Verification:** Standardized order statuses to ensure "Delivered," "Cancelled," and "Refunded" orders were mutually exclusive for accurate revenue calculation.
+
+### 3. Feature Engineering for Business Intelligence
+To provide deeper insights beyond the raw numbers, I engineered new data attributes:
+* **Age Group Segmentation:** Created a custom logic to bucket customers into **Teen, Adult, and Old Adult**. This allowed for targeted demographic analysis (e.g., *Who is buying more Sarees vs. Western Wear?*).
+* **Channel Attribution:** Grouped disparate SKU data to analyze performance across specific marketplaces including **Amazon, Flipkart, Myntra, Ajio, and Nalli**.
+
+### 4. Quality Assurance (QA)
+* **Duplicate Removal:** Identified and purged redundant transaction IDs to prevent the overstatement of sales KPIs.
+* **Null Handling:** Addressed missing values in geographic fields (City/State) to ensure the "Sales by State" heatmaps were comprehensive.
+
+---
+**Key Outcome:** Reduced data noise by ~15% and established a "Single Source of Truth" used for the final KPI Dashboard and Executive Report.
+
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/cce94003-bf09-4c5f-97f7-7359c920f2de" />
 *CHART*
 <img width="1908" height="755" alt="image" src="https://github.com/user-attachments/assets/9ff4e6d0-c5d3-4fe1-b86f-5dce42da5450" />
@@ -28,3 +52,22 @@ Boolean Logic: Standardized stock status and return flags for accurate KPI calcu
 <img width="1920" height="1025" alt="image" src="https://github.com/user-attachments/assets/5091721f-cad2-42eb-b44a-c5886f007223" />
 *REPORT*
 <img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/6f8ec7ac-9353-4ee0-8e13-ef82a4559580" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

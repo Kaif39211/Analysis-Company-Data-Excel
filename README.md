@@ -3,6 +3,7 @@ This project is an end-to-end Excel-based data analysis of sales and logistics o
 
 *RAW DATA*
 
+<img width="1918" height="1008" alt="image" src="https://github.com/user-attachments/assets/fd4ea198-b2cf-48b6-8863-6f46b5864e78" />
 1. Data Dictionary
 The raw dataset consists of the following key attributes:
 
@@ -17,10 +18,13 @@ Product Metadata: Granular details including Category (Saree, Kurta, Set), Size,
 Geographic Data: Destination mapping via City, State, and Pincode for regional performance analysis.
 
 Financials: Order valuation in INR and currency standardizations.
-<img width="1918" height="1008" alt="image" src="https://github.com/user-attachments/assets/fd4ea198-b2cf-48b6-8863-6f46b5864e78" />
+
 
 
 *DATA CORRECTION & CLEANING*
+
+<img width="1920" height="1003" alt="image" src="https://github.com/user-attachments/assets/07da7a1c-0808-4a08-bce6-e6275e4959c6" />
+
 ## 🛠️ Data Transformation & "Dirty Data" Resolution
 
 A significant portion of this project was dedicated to transforming the `RAW SHEET` (31,000+ records) into a verified, analysis-ready dataset. Real-world logistics data is rarely clean; I implemented the following data engineering steps to ensure 100% reporting accuracy.
@@ -42,19 +46,22 @@ To provide deeper insights beyond the raw numbers, I engineered new data attribu
 * **Duplicate Removal:** Identified and purged redundant transaction IDs to prevent the overstatement of sales KPIs.
 * **Null Handling:** Addressed missing values in geographic fields (City/State) to ensure the "Sales by State" heatmaps were comprehensive.
 
----
-**Key Outcome:** Reduced data noise by ~15% and established a "Single Source of Truth" used for the final KPI Dashboard and Executive Report.
 
-<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/cce94003-bf09-4c5f-97f7-7359c920f2de" />
+
+
 *CHART*
-<img width="1908" height="755" alt="image" src="https://github.com/user-attachments/assets/9ff4e6d0-c5d3-4fe1-b86f-5dce42da5450" />
+
+<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/2c1be1c0-65e7-4956-91ba-131df36d6afa" />
+
+
+
 *ANNUAL SALES TYPE*
-<img width="1920" height="1025" alt="image" src="https://github.com/user-attachments/assets/5091721f-cad2-42eb-b44a-c5886f007223" />
+
+<img width="1901" height="999" alt="image" src="https://github.com/user-attachments/assets/18902c31-f46e-457c-ba4f-7fb59f6dffea" />
+
+
 *REPORT*
-<img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/6f8ec7ac-9353-4ee0-8e13-ef82a4559580" />
-
-
-
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/6ef7ba49-347d-4f6d-af88-552943726743" />
 
 
 
